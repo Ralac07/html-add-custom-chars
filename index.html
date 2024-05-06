@@ -1,0 +1,16 @@
+
+<body>
+    <style>.container {
+        position: fixed;
+        top:0;
+        right: 0;
+        height: 200px;
+        aspect-ratio: 1;
+        background: silver;
+    }</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <div class="container unselectable">
+    </div>
+    <script>let chars="°";
+        console.log(chars);let charsList=Array.from(chars);for(const t of charsList)$(".container").append(`<button class="addChar">${t}</button>`);document.body.addEventListener("focusin",t=>{(t.target.classList.contains("unselectable")||$(t.target).parents(".unselectable").length>0)&&(t.relatedTarget?t.relatedTarget.focus():t.target.blur())}),$(".addChar").on("click",function(){focused=$(":focus"),focused.val(focused.val()+$(this).text())});</script>
+</body>
